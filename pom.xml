@@ -329,5 +329,16 @@
       </plugin>
     </plugins>
   </reporting>
+  
+  
+  <distributionManagement>
+	<repository>
+		<id>repoPruebas</id>
+		<name>Repositorio de Maven de Pruebas</name>
+		<url>scp://localhost/var/maven/repository</url>
+	</repository>
+</distributionManagement>
+  
+  
 
 </project>
