@@ -335,7 +335,7 @@
 	<repository>
 		<id>repoPruebas</id>
 		<name>Repositorio de Maven de Pruebas</name>
-		<url>scp://var/maven/repository</url>
+		<url>scp://localhost/var/maven/repository</url>
 	</repository>
 </distributionManagement>
   
