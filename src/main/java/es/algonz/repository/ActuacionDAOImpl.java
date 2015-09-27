@@ -20,7 +20,7 @@ import es.algonz.web.utils.ConstantesKeys;
 
 /**
  * DAO Actuacion.
- * @see es.algonz.ActuacionVO
+ * @see es.algonz.domain.ActuacionVO
  * 
  */
 @Repository(value = "ActuacionDAO")

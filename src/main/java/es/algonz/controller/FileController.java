@@ -41,7 +41,7 @@ public class FileController {
 	 *            : MultipartHttpServletRequest auto passed
 	 * @param response
 	 *            : HttpServletResponse auto passed
-	 * @return LinkedList<FileMeta> as json format
+	 * @return . LinkedList of FileMeta as json format
 	 ****************************************************/
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public @ResponseBody
@@ -121,7 +121,6 @@ public class FileController {
 	 *            : passed by the server
 	 * @param value
 	 *            : value from the URL
-	 * @return void
 	 ****************************************************/
 	@RequestMapping(value = "/get/{value}", method = RequestMethod.GET)
 	public void get(HttpServletResponse response, @PathVariable String value) {

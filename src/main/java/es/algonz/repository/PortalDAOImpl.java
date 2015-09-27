@@ -19,7 +19,7 @@ import es.algonz.domain.PortalVO;
 
 /**
  * DAO Portal.
- * @see es.algonz.PortalVO
+ * @see es.algonz.domain.PortalVO
  * 
  */
 @Repository(value = "PortalDAO")

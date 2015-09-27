@@ -20,7 +20,7 @@ import es.algonz.domain.PredioVO;
 
 /**
  * DAO Comunidad.
- * @see es.algonz.ComunidadVO
+ * @see es.algonz.domain.ComunidadVO
  * 
  */
 @Repository(value = "ComunidadDAO")

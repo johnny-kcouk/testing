@@ -19,7 +19,7 @@ import es.algonz.domain.EstadoVO;
 
 /**
  * DAO Estado.
- * @see es.algonz.EstadoVO
+ * @see es.algonz.domain.EstadoVO
  * 
  */
 @Repository(value = "EstadoDAO")

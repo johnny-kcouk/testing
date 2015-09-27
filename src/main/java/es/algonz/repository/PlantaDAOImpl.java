@@ -19,7 +19,7 @@ import es.algonz.domain.PlantaVO;
 
 /**
  * DAO Planta.
- * @see es.algonz.PlantaVO
+ * @see es.algonz.domain.PlantaVO
  * 
  */
 @Repository(value = "PlantaDAO")

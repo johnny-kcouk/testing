@@ -22,7 +22,7 @@ import es.algonz.domain.PredioVO;
 
 /**
  * DAO Predio.
- * @see es.algonz.PredioVO
+ * @see es.algonz.domain.PredioVO
  * 
  */
 @Repository(value = "PredioDAO")

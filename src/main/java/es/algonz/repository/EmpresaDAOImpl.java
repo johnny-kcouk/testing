@@ -19,7 +19,7 @@ import es.algonz.domain.EmpresaVO;
 
 /**
  * DAO Empresa.
- * @see es.algonz.EmpresaVO
+ * @see es.algonz.domain.EmpresaVO
  * 
  */
 @Repository(value = "EmpresaDAO")

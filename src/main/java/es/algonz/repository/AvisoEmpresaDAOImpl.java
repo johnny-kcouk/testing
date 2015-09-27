@@ -20,7 +20,7 @@ import es.algonz.web.utils.ConstantesKeys;
 
 /**
  * DAO AvisoEmpresa.
- * @see es.algonz.AvisoEmpresaVO
+ * @see es.algonz.domain.AvisoEmpresaVO
  * 
  */
 @Repository(value = "AvisoEmpresaDAO")

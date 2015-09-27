@@ -14,7 +14,7 @@ import es.algonz.domain.TerceroVO;
 
 /**
  * DAO Tercero.
- * @see es.algonz.TerceroVO
+ * @see es.algonz.domain.TerceroVO
  * 
  */
 @Repository(value = "TerceroDAO")

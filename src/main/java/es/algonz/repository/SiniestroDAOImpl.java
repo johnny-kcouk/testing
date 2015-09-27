@@ -19,7 +19,7 @@ import es.algonz.domain.SiniestroVO;
 
 /**
  * DAO Siniestro.
- * @see es.algonz.SiniestroVO
+ * @see es.algonz.domain.SiniestroVO
  * 
  */
 @Repository(value = "SiniestroDAO")

@@ -18,7 +18,7 @@ import es.algonz.domain.DocumentoVO;
 
 /**
  * DAO Documento.
- * @see es.algonz.DocumentoVO
+ * @see es.algonz.domain.DocumentoVO
  * 
  */
 @Repository(value = "DocumentoDAO")

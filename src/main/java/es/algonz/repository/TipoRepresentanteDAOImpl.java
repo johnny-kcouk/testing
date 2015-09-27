@@ -19,7 +19,7 @@ import es.algonz.domain.TipoRepresentanteVO;
 
 /**
  * DAO TipoRepresentante.
- * @see es.algonz.TipoRepresentanteVO
+ * @see es.algonz.domain.TipoRepresentanteVO
  * 
  */
 @Repository(value = "TipoRepresentanteDAO")

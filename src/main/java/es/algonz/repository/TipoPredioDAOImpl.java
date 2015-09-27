@@ -14,7 +14,7 @@ import es.algonz.domain.TipoPredioVO;
 
 /**
  * DAO TipoPredio.
- * @see es.algonz.TipoPredioVO
+ * @see es.algonz.domain.TipoPredioVO
  * 
  */
 @Repository(value = "TipoPredioDAO")
