@@ -18,7 +18,7 @@
 		
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<spring.security.version>4.0.1.RELEASE</spring.security.version>
-		
+      	<project.scm.id>smcServer</project.scm.id>
 	</properties>
 
 	<dependencies>
@@ -142,7 +142,7 @@
 		    <artifactId>tiles-extras</artifactId>
 		    <version>3.0.5</version>
 		  </dependency>	
-<!-- 	<dependency>
+		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
 			<version>1.9.7</version>
@@ -152,8 +152,7 @@
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.7</version>
 		</dependency>
- -->
-	
+
 	
 		
 		<!-- TEST SCOPE -->
@@ -256,7 +255,17 @@
     <version>2.6</version>
   </dependency>
 	 -->
+	 
+
 	</dependencies>
+	
+     
+ <scm>
+    <developerConnection>scm:git:https://github.com/johnny-kcouk/test</developerConnection>
+ 
+    <connection>scm:git:http://github.com/johnny-kcouk/test</connection>
+    <url>scm:git:http://github.com/johnny-kcouk/test</url>
+  </scm>	
 
 	<build>
 		<finalName>algonz</finalName>
@@ -287,6 +296,13 @@
 		        <version>2.5</version>
 		        
 		      </plugin> 
+		      
+		      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.2</version>
+      </plugin>
 			
 			<!-- Duplicidad de Clases 
 			<plugin>
@@ -303,5 +319,15 @@
 		</plugin>-->
 		</plugins>
 	</build>
+	
+	<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changelog-plugin</artifactId>
+        <version>2.3</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
