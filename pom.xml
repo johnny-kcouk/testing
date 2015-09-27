@@ -3,7 +3,7 @@
 	<groupId>es.algonz</groupId>
 	<artifactId>algonz</artifactId>
 	<packaging>war</packaging>
-	<version>2.3-SNAPSHOT</version>
+	<version>2.3</version>
 	<name>Algonz Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
@@ -264,7 +264,7 @@
  
     <connection>scm:git:http://github.com/johnny-kcouk/test</connection>
     <url>scm:git:http://github.com/johnny-kcouk/test</url>
-    <tag>HEAD</tag>
+    <tag>algonz-2.3</tag>
   </scm>	
 
 	<build>
