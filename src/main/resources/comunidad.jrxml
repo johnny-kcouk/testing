@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comunidad" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5418677-994b-4248-91bf-c38abadd45c2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#8FCCCC">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#CFE6E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F8F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="a6a5674e-c603-40c3-8c71-7d2c32111d1b">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="teObservaciones" class="java.lang.String">
+			<fieldDescription><![CDATA[teObservaciones]]></fieldDescription>
+		</field>
+		<field name="tipoRepresentante" class="es.algonz.domain.TipoRepresentanteVO">
+			<fieldDescription><![CDATA[tipoRepresentante]]></fieldDescription>
+		</field>
+		<field name="portal" class="es.algonz.domain.PortalVO">
+			<fieldDescription><![CDATA[portal]]></fieldDescription>
+		</field>
+		<field name="planta" class="es.algonz.domain.PlantaVO">
+			<fieldDescription><![CDATA[planta]]></fieldDescription>
+		</field>
+		<field name="terceroByCnPropietario" class="es.algonz.domain.TerceroVO">
+			<fieldDescription><![CDATA[terceroByCnPropietario]]></fieldDescription>
+		</field>
+		<field name="tePredio" class="java.lang.String">
+			<fieldDescription><![CDATA[tePredio]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logo" class="Object" isForPrompting="false">
+		<parameterDescription><![CDATA[The letterhead image]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="caCif" class="java.lang.String">
+		<fieldDescription><![CDATA[caCif]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cnComunidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cnComunidad]]></fieldDescription>
+	</field>
+	<field name="documentos" class="java.util.Set">
+		<fieldDescription><![CDATA[documentos]]></fieldDescription>
+	</field>
+	<field name="empresasComunidad" class="java.util.Set">
+		<fieldDescription><![CDATA[empresasComunidad]]></fieldDescription>
+	</field>
+	<field name="portals" class="java.util.Set">
+		<fieldDescription><![CDATA[portals]]></fieldDescription>
+	</field>
+	<field name="representantes" class="java.util.List">
+		<fieldDescription><![CDATA[representantes]]></fieldDescription>
+	</field>
+	<field name="teCp" class="java.lang.String">
+		<fieldDescription><![CDATA[teCp]]></fieldDescription>
+	</field>
+	<field name="teNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[teNombre]]></fieldDescription>
+	</field>
+	<field name="teObservaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[teObservaciones]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<image>
+				<reportElement uuid="6142cbd6-d753-451e-aa70-fef8d934214d" x="0" y="0" width="180" height="83"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="fa04d683-4173-43ab-bb46-5a362310c25d" x="155" y="9" width="245" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{teNombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="df22aa37-f059-45c1-a093-bcb9985e592a" x="227" y="37" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caCif}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="3c9c02af-1d03-4117-bce8-ae5b6010ade1" x="0" y="3" width="555" height="1"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{empresasComunidad})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "empresasComunidad.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="6db32023-f715-40b7-9a7a-a51e3b7cdda6" x="192" y="-21" width="193" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONOS DE EMERGENCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13ef9bd9-3d7c-4ee7-89e8-96088bd0ea37" positionType="Float" x="157" y="13" width="240" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPRESENTANTES DE LA COMUNIDAD]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="cb2f4d12-d821-4238-9ca4-394335623dbf" positionType="Float" x="0" y="36" width="555" height="1"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{representantes})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "representantesComunidad.jasper"]]></subreportExpression>
+			</subreport>
+			<componentElement>
+				<reportElement uuid="4555e1dd-2059-498b-98b9-5b6d95b46356" key="table 4" style="table 4" positionType="Float" x="0" y="42" width="555" height="1">
+					<printWhenExpression><![CDATA[false]]></printWhenExpression>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="ab4bb395-9a42-479b-941e-dce4b93665ff">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{representantes})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="114" uuid="f5b78aab-2e53-4769-afc0-61cfa75e1463">
+						<jr:columnHeader style="table 4_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6df8e84e-a258-48a5-afc7-70f33dbbb67b" x="0" y="0" width="114" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Representante]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 4_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="077c70e7-2672-45a5-9962-6df621233764" x="0" y="0" width="114" height="20" isPrintWhenDetailOverflows="true"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{tipoRepresentante}.teTipoRepresentante]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="135" uuid="6710c310-0980-4d2e-b8e6-8e41884c3c4b">
+						<jr:columnHeader style="table 4_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="0082e766-34c8-40f8-8091-a4583403bd4e" x="0" y="0" width="135" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Portal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 4_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="4e998b0f-5121-4bb9-a909-b8d47a5e8c70" x="0" y="0" width="135" height="20" isPrintWhenDetailOverflows="true"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{portal}.teNombre]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="62605937-6235-4cc5-828a-ae7637350cd9">
+						<jr:columnHeader style="table 4_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9a608f7b-dc8a-4ec9-b92c-f1d2572dfc2f" x="0" y="0" width="90" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Piso]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 4_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="b0c6986e-615a-4a1e-b833-7ab4ef2ad71e" x="0" y="0" width="90" height="20" isPrintWhenDetailOverflows="true"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{planta}.tePlanta + " - " + $F{tePredio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="185" uuid="853b1242-811d-4b97-aa1f-510324804d58">
+						<jr:columnHeader style="table 4_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="7893821a-9756-419f-bdfd-f8eaee58d3cb" x="0" y="0" width="163" height="30"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nombre y apellidos]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 4_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 4_TD" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement uuid="ca583d05-06ba-45f7-9557-e8f988b2f87a" x="0" y="0" width="163" height="20" isPrintWhenDetailOverflows="true"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{terceroByCnPropietario}.teNombre + " " + $F{terceroByCnPropietario}.teApellido1 + " " + $F{terceroByCnPropietario}.teApellido2]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="dfea952c-a213-409b-b66b-c7a5ec75e20a" x="90" y="3" width="452" height="15"/>
+				<textElement/>
+				<text><![CDATA[- MARIA ANGELES GONZALEZ GUTIERREZ ( angeles@algonz.es)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e3ddb583-8454-4e02-9088-d958d5ae020b" x="2" y="3" width="88" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AlGonz Asesoría]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2007664c-ad64-416a-aa52-f51d5738f43f" x="2" y="19" width="540" height="15"/>
+				<textElement/>
+				<text><![CDATA[C/ Les Cigarreres Nº25 Bajo, 33211 Gijón, Asturias Tel: 985.14.98.36 / 626.09.94.01 Fax: 985.14.98.36]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+	       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="plantillaLogin" template="/WEB-INF/pages/templates/login_template.jsp">		
+		<put-attribute name="title" value="/WEB-INF/pages/blank.jsp" />
+		<put-attribute name="head" value="/WEB-INF/pages/head.jsp" />        
+        <put-attribute name="header" value="/WEB-INF/pages/header.jsp" />
+        <put-attribute name="body" value="/WEB-INF/pages/blank.jsp" />
+        <put-attribute name="foot" value="/WEB-INF/pages/blank.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/pages/blank.jsp" />
+	</definition>
+
+	<definition name="plantillaTiles" template="/WEB-INF/pages/templates/main_template.jsp">		
+		<put-attribute name="title" value="/WEB-INF/pages/blank.jsp" />
+        <put-attribute name="head" value="/WEB-INF/pages/head.jsp" />
+        <put-attribute name="header" value="/WEB-INF/pages/header.jsp" />
+        <put-attribute name="messages" value="/WEB-INF/pages/messages.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/pages/menu.jsp" />
+        <put-attribute name="content" value="/WEB-INF/pages/blank.jsp" />
+        <put-attribute name="foot" value="/WEB-INF/pages/blank.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/pages/footer.jsp" />	
+	</definition>
+
+	<definition name="login" extends="plantillaLogin">			
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+		
+	<!-- Comunidad -->
+	
+	<definition name="listadoComunidades" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/comunidades/listaComunidades.jsp" />
+	</definition>
+	
+	<definition name="detalleComunidad" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/comunidades/detalleComunidad.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Empresa -->
+	
+	<definition name="detalleEmpresaComunidad" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/empresasComunidad/detalleEmpresaComunidad.jsp" />
+	</definition>
+	
+	<!-- Aviso -->
+	
+	<definition name="detalleAvisoEmpresa" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/empresasComunidad/detalleAvisoEmpresa.jsp" />
+	</definition>
+	
+	
+			
+	<!-- Portal -->
+	
+	<definition name="listadoPortales" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/portales/listaPortales.jsp" />
+	</definition>
+	
+	<definition name="detallePortal" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/portales/detallePortal.jsp" />
+	</definition>
+		
+		
+		
+	<!-- Predio -->
+	
+	<definition name="listadoPredios" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/predios/listaPredios.jsp" />
+	</definition>
+	
+	<definition name="detallePredio" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/predios/detallePredio.jsp" />
+	</definition>
+		
+		
+		
+	<!-- Empresa -->
+	
+	<definition name="listadoEmpresas" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/empresas/listaEmpresas.jsp" />
+	</definition>
+	
+	<definition name="detalleEmpresa" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/empresas/detalleEmpresa.jsp" />
+	</definition>
+	
+		
+	<!-- Siniestro -->
+	
+	<definition name="listadoSiniestros" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/siniestros/listaSiniestros.jsp" />
+	</definition>
+	
+	<definition name="detalleSiniestro" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/siniestros/detalleSiniestro.jsp" />
+	</definition>	
+	
+	<!-- Actuacion -->
+	
+	<definition name="detalleActuacion" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/siniestros/detalleActuacion.jsp" />
+	</definition>
+	
+	
+		
+	<!-- Alarmas -->
+	
+	<definition name="listadoAlarmas" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/alarmas/listaAlarmas.jsp" />
+	</definition>
+	
+	<!-- Usuario -->
+	<definition name="detalleUsuario" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/usuario/detalleUsuario.jsp" />
+	</definition>
+	
+	<definition name="listadoUsuarios" extends="plantillaTiles">			
+		<put-attribute name="content" value="/WEB-INF/pages/usuario/listaUsuarios.jsp" />
+	</definition>
+	
+	
+	
+</tiles-definitions>

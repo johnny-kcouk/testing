@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="representantesComunidad" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8106d4c2-6a97-4fee-ba29-55b3c78bb841">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="terceroByCnPropietario" class="es.algonz.domain.TerceroVO">
+		<fieldDescription><![CDATA[terceroByCnPropietario]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cnPredio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cnPredio]]></fieldDescription>
+	</field>
+	<field name="documentos" class="java.util.Set">
+		<fieldDescription><![CDATA[documentos]]></fieldDescription>
+	</field>
+	<field name="planta" class="es.algonz.domain.PlantaVO">
+		<fieldDescription><![CDATA[planta]]></fieldDescription>
+	</field>
+	<field name="portal" class="es.algonz.domain.PortalVO">
+		<fieldDescription><![CDATA[portal]]></fieldDescription>
+	</field>
+	<field name="teObservaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[teObservaciones]]></fieldDescription>
+	</field>
+	<field name="tePiso" class="java.lang.String">
+		<fieldDescription><![CDATA[tePiso]]></fieldDescription>
+	</field>
+	<field name="tePlaza" class="java.lang.String">
+		<fieldDescription><![CDATA[tePlaza]]></fieldDescription>
+	</field>
+	<field name="tePredio" class="java.lang.String">
+		<fieldDescription><![CDATA[tePredio]]></fieldDescription>
+	</field>
+	<field name="teTrastero" class="java.lang.String">
+		<fieldDescription><![CDATA[teTrastero]]></fieldDescription>
+	</field>
+	<field name="terceroByCnConyuge" class="es.algonz.domain.TerceroVO">
+		<fieldDescription><![CDATA[terceroByCnConyuge]]></fieldDescription>
+	</field>
+	<field name="terceroByCnInquilino" class="es.algonz.domain.TerceroVO">
+		<fieldDescription><![CDATA[terceroByCnInquilino]]></fieldDescription>
+	</field>
+	<field name="tipoPredio" class="es.algonz.domain.TipoPredioVO">
+		<fieldDescription><![CDATA[tipoPredio]]></fieldDescription>
+	</field>
+	<field name="tipoRepresentante" class="es.algonz.domain.TipoRepresentanteVO">
+		<fieldDescription><![CDATA[tipoRepresentante]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="22">
+			<staticText>
+				<reportElement uuid="19fd22aa-bc81-41bf-99ec-832abfc0cf67" x="330" y="2" width="110" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre y apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a8833ac-9e36-4098-a2cc-424eb65e9738" x="17" y="2" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Representante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="84e3e699-bf94-4a85-aea8-4bdd5c191031" x="230" y="2" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Piso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff7538f5-08fc-41b8-98e2-f5ba7d64a325" x="130" y="2" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Portal]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="18f7be9b-239b-4456-86c0-0c42654df8d3" x="0" y="19" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f2ce0c01-7809-4d93-8d5f-9a5316941953" x="17" y="0" width="113" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipoRepresentante}.teTipoRepresentante]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4b486dfd-59d1-452b-b990-921723b18f42" x="330" y="0" width="248" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{terceroByCnPropietario}.teNombre + " " + $F{terceroByCnPropietario}.teApellido1 + " " + $F{terceroByCnPropietario}.teApellido2]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a4cdd63a-cffe-47e1-9634-adc3436e2d70" x="230" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{planta}.tePlanta + " - " + $F{tePredio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e9af7f03-8fba-47b1-a848-e3938deafab3" x="130" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{portal}.teNombre]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

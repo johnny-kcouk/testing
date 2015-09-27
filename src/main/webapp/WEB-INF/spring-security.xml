@@ -1,0 +1,42 @@
+<beans:beans 
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http use-expressions="true">
+		<intercept-url pattern="/action/login" access="hasRole('ROLE_ANONYMOUS')" />
+		<intercept-url pattern="/action/loginfailed" access="hasRole('ROLE_ANONYMOUS')" />
+		<intercept-url pattern="/action/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/action/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/css/**" access="hasRole('ROLE_ANONYMOUS')" />
+		<intercept-url pattern="/js/**" access="hasRole('ROLE_ANONYMOUS')" />
+		<intercept-url pattern="/img/**" access="hasRole('ROLE_ANONYMOUS')" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
+		<form-login login-page="/action/login" default-target-url="/action/welcome"
+			authentication-failure-url="/action/loginfailed" />
+		<logout logout-success-url="/action/logout" />
+	</http>
+		
+	
+	<authentication-manager>
+		<authentication-provider>	
+			<password-encoder hash="sha"/>			
+			<jdbc-user-service data-source-ref="dataSource"
+				
+				users-by-username-query="
+					select idsistema,pwdsistema, enabled 
+					from usuario where idsistema=?" 
+				
+				authorities-by-username-query="
+					select u.idsistema, r.authority from usuario u, usuario_rol ur, rol r 
+					where u.idUsuario = ur.idUsuario and ur.idRol=r.idRol and u.idsistema =?  " 
+					
+			/>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
