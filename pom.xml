@@ -334,7 +334,7 @@
 	<repository>
 		<id>repoPruebas</id>
 		<name>Repositorio de Maven de Pruebas</name>
-		<url>scp://kcouk@10.0.0.13/var/maven/repository</url>
+		<url>file:///var/maven/repository</url>
 	</repository>
 </distributionManagement>
   
