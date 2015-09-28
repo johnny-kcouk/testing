@@ -260,8 +260,7 @@
 	
      
  <scm>
-    <developerConnection>scm:git:https://github.com/johnny-kcouk/test</developerConnection>
- 
+    <developerConnection>scm:git:http://github.com/johnny-kcouk/test</developerConnection>
     <connection>scm:git:http://github.com/johnny-kcouk/test</connection>
     <url>scm:git:http://github.com/johnny-kcouk/test</url>
     <tag>algonz-2.5</tag>
